@@ -2,6 +2,7 @@ function palindrome(str) {
 //?standardize the input
 //remove non-alphanumeric characters
 let inputStr = str.replace(/\W/g, '');
+inputStr = str.replace(/[^0-9a-zA-Z_]/g, '');
 console.log(inputStr);
 
 //make sure it's lowercase
@@ -28,4 +29,4 @@ return check;
     
   }
   
-palindrome("not a palindrome");
+palindrome("_eye");
