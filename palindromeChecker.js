@@ -1,22 +1,14 @@
 function palindrome(str) {
-//?standardize the input
-//remove non-alphanumeric characters
+//standardize the input
+//Remove non-alphanumeric characters including spaces
 let inputStr = str.replace(/\W/g, '');
 inputStr = str.replace(/[^a-zA-Z0-9]/g, '');
-console.log(inputStr);
 
 //make sure it's lowercase
 inputStr = inputStr.toLowerCase();
-console.log(inputStr);
 
 //Reverse the input string
-//let inputReverse = inputStr.split('').reverse().join('');
-let inputReverse = inputStr.split('');
-console.log(inputReverse);
-inputReverse = inputReverse.reverse();
-console.log(inputReverse);
-inputReverse = inputReverse.join('');
-console.log(inputReverse);
+let inputReverse = inputStr.split('').reverse().join('');
 
 //Compare the original and reversed strings
 let check = "";
@@ -27,12 +19,7 @@ if (inputStr === inputReverse)
     check = false;
 }
 console.log(check);
-return check;
-
-
-//return console.log(inputStr === inputReverse);
-
-    
-  }
+return check;    
+}
   
 palindrome("race car");
